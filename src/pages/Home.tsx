@@ -1,45 +1,15 @@
 
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
+import Carousel from '../components/Carousel';
 
 const Home = () => {
   const { t } = useLanguage();
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-orange-400 bg-clip-text text-transparent">
-              {t('heroTitle')}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              {t('heroSubtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                {t('getQuote')}
-              </Link>
-              <Link
-                to="/portfolio"
-                className="px-8 py-4 border-2 border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
-              >
-                {t('viewPortfolio')}
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-full animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full animate-pulse delay-1000" />
-      </section>
+      {/* Hero Carousel Section */}
+      <Carousel />
 
       {/* Services Preview */}
       <section className="py-20 bg-gray-800">
