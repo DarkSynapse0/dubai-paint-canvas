@@ -35,7 +35,7 @@ const ModernCard = ({
   };
 
   const hoverClasses = hover 
-    ? 'hover:scale-105 hover:shadow-2xl cursor-pointer' 
+    ? 'hover:scale-105 cursor-pointer' 
     : '';
 
   const glowClasses = glow 
