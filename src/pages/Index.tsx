@@ -23,7 +23,7 @@ const Index = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
       }
     },
     exit: { 
@@ -31,7 +31,7 @@ const Index = () => {
       y: -20,
       transition: {
         duration: 0.3,
-        ease: "easeIn"
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
       }
     }
   };

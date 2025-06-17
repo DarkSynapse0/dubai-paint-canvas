@@ -55,7 +55,7 @@ const ModernCard = ({
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
       }
     },
     hover: hover ? {
@@ -63,7 +63,7 @@ const ModernCard = ({
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
       }
     } : {},
     tap: {

@@ -36,7 +36,7 @@ const FloatingCTA = () => {
       scale: 1, 
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 260,
         damping: 20
       }
@@ -60,7 +60,7 @@ const FloatingCTA = () => {
       scale: 1,
       transition: {
         delay,
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 25
       }
