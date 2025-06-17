@@ -1,5 +1,4 @@
 
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface ModernCardProps {
@@ -43,39 +42,8 @@ const ModernCard = ({
     ? 'hover-glow' 
     : '';
 
-  const cardVariants = {
-    initial: { 
-      opacity: 0, 
-      y: 20,
-      scale: 0.95
-    },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
-      }
-    },
-    hover: hover ? {
-      y: -8,
-      scale: 1.02,
-      transition: {
-        duration: 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number]
-      }
-    } : {},
-    tap: {
-      scale: 0.98,
-      transition: {
-        duration: 0.1
-      }
-    }
-  };
-
   return (
-    <motion.div
+    <div
       className={`
         ${baseClasses}
         ${variantClasses[variant]}
@@ -84,29 +52,9 @@ const ModernCard = ({
         ${glowClasses}
         ${className}
       `}
-      variants={cardVariants}
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      whileTap="tap"
     >
-      {/* Shimmer Effect */}
-      <div className="relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12"
-          animate={{
-            x: ['-100%', '100%']
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            repeatDelay: 5,
-            ease: "easeInOut"
-          }}
-        />
-        {children}
-      </div>
-    </motion.div>
+      {children}
+    </div>
   );
 };
 
